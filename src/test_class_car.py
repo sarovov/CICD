@@ -9,6 +9,7 @@ class TestCase(unittest.TestCase):
         pass
 
     def test_drive(self):
+        self.car.refuel_car(20)
         self.car.drive(20)
         with self.assertRaises(Exception):
             self.car.drive(80000)
@@ -17,8 +18,5 @@ class TestCase(unittest.TestCase):
         self.car.refuel_car(20)
         self.assertEqual(self.car.get_current_fuel_level(), 20)
         with self.assertRaises(Exception):
-            self.car.refuel_car(80))
-#12345OO
-
-
-#1214315
+            self.car.refuel_car(80)
+#123
